@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | Amazon Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho Principal -->
+    <header>
+<!-- Área do Usuário -->
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <div style="font-size: 13px; line-height: 1.2;">
+                <span style="color: #ccc;">Olá, <span id="nav-nome-usuario">Visitante</span></span><br>
+                <strong style="font-size: 14px; color: white;">Contas e Listas</strong>
+            </div>
+            
+            <!-- A div nav-area que o JS vai usar para injetar o Admin e o Sair -->
+            <div id="nav-area" style="display: flex; align-items: center;"></div>
+        </div>
+    </header>
+
+
+
+    <!-- Conteúdo Principal -->
+    <main style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        
+        <!-- Banner de Boas-vindas -->
+        <div style="background: linear-gradient(to right, #007185, #4ec2d6); height: 220px; border-radius: 4px; display: flex; align-items: center; padding: 40px; margin-bottom: 25px; color: white;">
+            <div>
+                <h1 style="color: white; font-size: 34px; margin-bottom: 10px; font-weight: bold;">Bem-vindo(a), <span id="banner-nome-usuario"></span>!</h1>
+                <p style="font-size: 18px; font-weight: 400;">Aproveite nossas ofertas exclusivas selecionadas para você hoje.</p>
+            </div>
+        </div>
+
+        <!-- Grade de Produtos -->
+        <h2 style="font-size: 21px; margin-bottom: 15px; font-weight: bold;">Recomendações baseadas nas suas tendências</h2>
+        
+        <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <div class="product-image">📱</div>
+                <h3 class="product-title">Smartphone Ultra 5G, 256GB, Câmera 108MP</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐ <span style="color: var(--amz-link-blue); font-size: 12px;">(1.245)</span></div>
+                <div class="product-price">R$ 2.499,00</div>
+                <p style="font-size: 12px; margin-bottom: 10px; color: var(--amz-text-light);">Receba amanhã com o Prime</p>
+                <button class="btn">Adicionar ao carrinho</button>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <div class="product-image">💻</div>
+                <h3 class="product-title">Notebook Pro 15", Intel Core i7, 16GB RAM</h3>
+                <div class="product-rating">⭐⭐⭐⭐☆ <span style="color: var(--amz-link-blue); font-size: 12px;">(832)</span></div>
+                <div class="product-price">R$ 4.850,00</div>
+                <p style="font-size: 12px; margin-bottom: 10px; color: var(--amz-text-light);">Frete GRÁTIS</p>
+                <button class="btn">Adicionar ao carrinho</button>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <div class="product-image">🎧</div>
+                <h3 class="product-title">Fone de Ouvido Bluetooth com Cancelamento de Ruído</h3>
+                <div class="product-rating">⭐⭐⭐⭐⭐ <span style="color: var(--amz-link-blue); font-size: 12px;">(3.109)</span></div>
+                <div class="product-price">R$ 359,90</div>
+                <p style="font-size: 12px; margin-bottom: 10px; color: var(--amz-text-light);">Receba amanhã com o Prime</p>
+                <button class="btn">Adicionar ao carrinho</button>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <h3 class="product-title">Smartwatch Esportivo 4 com Monitor Cardíaco</h3>
+                <div class="product-rating">⭐⭐⭐⭐☆ <span style="color: var(--amz-link-blue); font-size: 12px;">(450)</span></div>
+                <div class="product-price">R$ 799,00</div>
+                <p style="font-size: 12px; margin-bottom: 10px; color: var(--amz-text-light);">Frete GRÁTIS</p>
+                <button class="btn">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="home.js"></script>
+</body>
+</html>

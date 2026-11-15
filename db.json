@@ -1,0 +1,32 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "sobrenome": "Sistema",
+      "cpf": "000.000.000-00",
+      "email": "admin@email.com",
+      "senha": "123",
+      "rua": "Rua Central",
+      "cep": "01000-000",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "telefone": "(11) 99999-9999",
+      "isAdmin": true
+    },
+    {
+      "nome": "Maria Clara ",
+      "sobrenome": "Fraga dos Santos",
+      "cpf": "123.456.789-02",
+      "email": "mariafraga@gmail.com",
+      "senha": "12345",
+      "rua": "Rua dos Vicentinos",
+      "cep": "12345-678",
+      "cidade": "Mogi das Cruzes",
+      "estado": "SP",
+      "telefone": "11 9 1234-5678",
+      "isAdmin": false,
+      "id": "sPE7ux3"
+    }
+  ]
+}

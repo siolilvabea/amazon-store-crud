@@ -1,0 +1,332 @@
+/* ==========================================================================
+   AMAZON CLONE - ESTILO REALISTA
+   ========================================================================== */
+
+:root {
+    /* Cores Oficiais da Amazon */
+    --amz-bg-body: #eaeded;        /* Fundo cinza claro clássico */
+    --amz-bg-header: #131921;      /* Azul escuro/preto do topo */
+    --amz-bg-nav: #232f3e;         /* Azul escuro da barra secundária */
+    
+    --amz-orange: #f90;
+    --amz-btn-primary: #ffd814;    /* Amarelo dos botões */
+    --amz-btn-primary-hover: #f7ca00;
+    --amz-btn-secondary: #ffffff;
+    --amz-btn-secondary-hover: #f7fafa;
+    
+    --amz-link-blue: #007185;
+    --amz-link-hover: #c40000;     /* Vermelho ao passar o mouse nos links */
+    
+    --amz-text-main: #0f1111;
+    --amz-text-light: #565959;
+    
+    --amz-border: #d5d9d9;         /* Bordas das caixas */
+    --amz-border-input: #888C8C;
+    --amz-focus: #e77600;          /* Laranja de foco nos inputs */
+    
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--amz-bg-body);
+    color: var(--amz-text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Padrão Amazon */
+header {
+    background-color: var(--amz-bg-header);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--amz-orange);
+}
+
+.logo:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: -1px; /* Compensa a borda */
+}
+
+/* Card Principal (Containers brancos) */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    border: 1px solid var(--amz-border);
+    border-radius: var(--radius-md);
+    width: 95%;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* Sombra bem leve */
+}
+
+/* Títulos */
+h1, h2 {
+    margin-bottom: 20px;
+    color: var(--amz-text-main);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* Formulários */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+label {
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--amz-text-main);
+}
+
+input {
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid var(--amz-border-input);
+    border-radius: var(--radius-sm);
+    color: var(--amz-text-main);
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(15,17,17,0.15) inset;
+    transition: all 0.1s ease;
+}
+
+input::placeholder {
+    color: var(--amz-text-light);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--amz-focus);
+    box-shadow: 0 0 0 3px rgba(228, 121, 17, 0.2), 0 1px 2px rgba(15,17,17,0.15) inset;
+}
+
+/* Botão Primário (Amarelo Amazon) */
+.btn {
+    background-color: var(--amz-btn-primary);
+    color: var(--amz-text-main);
+    padding: 10px 16px;
+    border: 1px solid #fcd200;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(15,17,17,0.15);
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--amz-btn-primary-hover);
+}
+
+/* Botão Secundário (Branco/Cinza) */
+.btn-secondary {
+    background-color: var(--amz-btn-secondary);
+    border: 1px solid var(--amz-border);
+    box-shadow: 0 2px 5px rgba(15,17,17,0.15);
+    font-weight: 400;
+}
+
+.btn-secondary:hover {
+    background-color: var(--amz-btn-secondary-hover);
+}
+
+/* Botão de Perigo (Vermelho) */
+.btn-danger {
+    background-color: #ffffff;
+    color: #c40000;
+    border: 1px solid var(--amz-border);
+}
+
+.btn-danger:hover {
+    background-color: #fcf4f4;
+    border-color: #c40000;
+}
+
+/* Links */
+a {
+    color: var(--amz-link-blue);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    color: var(--amz-link-hover);
+    text-decoration: underline;
+}
+
+.link-box {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--amz-text-light);
+    font-size: 13px;
+    border-top: 1px solid #e7e7e7;
+    padding-top: 15px;
+}
+
+/* Tabelas (Para o painel do Admin) */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--amz-border);
+}
+
+th {
+    background: #f3f3f3;
+    color: var(--amz-text-main);
+    font-weight: 700;
+}
+
+td {
+    color: var(--amz-text-main);
+}
+
+tr:hover td {
+    background: #fcfcfc;
+}
+
+/* ==========================================================================
+   CARDS DE PRODUTOS (HOME)
+   ========================================================================== */
+.product-card {
+    background: #ffffff;
+    border: 1px solid var(--amz-border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    background: #f8f8f8;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--amz-link-blue);
+    margin-bottom: 8px;
+    
+    /* Método padrão do CSS para limitar a 2 linhas e não dar erro no editor */
+    line-height: 1.2em;
+    max-height: 2.4em;
+    overflow: hidden;
+    display: block;
+}
+
+.product-title:hover {
+    color: var(--amz-link-hover);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.product-rating {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--amz-text-main);
+    margin-bottom: 5px;
+}
+
+/* Responsividade Geral */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-bar {
+        margin: 0 !important;
+        width: 100%;
+        order: 3;
+    }
+    
+    .container {
+        padding: 20px;
+        margin: 15px auto;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+}
